@@ -4,7 +4,7 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    command: python app/main.py
+    command: python main.py
     tty: true
     volumes:
       - ./backend:/app/:cached
@@ -24,3 +24,6 @@ services:
       - '5432:5432'
     volumes:
       - db-data:/var/lib/postgresql/data:cached
+
+volumes:
+  db-data:
