@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "easychange"
+version = "0.1.0"
+description = ""
+authors = ["rolldeep"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.90.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+sqlalchemy = "^2.0.2"
+alembic = "^1.9.3"
+python-dateutil = "^2.8.2"
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = "^0.20.0"
+fastapi = "^0.90.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
