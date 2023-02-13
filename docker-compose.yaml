@@ -4,7 +4,7 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    command: python main.py
+    command: uvicorn app.main:app --reload
     tty: true
     volumes:
       - ./backend:/app/:cached
@@ -12,6 +12,8 @@ services:
     environment:
       PYTHONPATH: .
       DATABASE_URL: 'postgresql://postgres:postgres@postgres:5432/postgres'
+    ports:
+      - '8000:8000'
     depends_on:
       - "postgres"
   postgres:

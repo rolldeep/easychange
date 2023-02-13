@@ -2,10 +2,8 @@ from sqlalchemy.orm import Session
 
 from . import models
 
-from app.model import schemas
 
-
-def get_pair_by_name(db: Session, name: str):
+def get_pair(db: Session, name: str):
     return db.query(models.Pair).filter(models.Pair.name == name).first()
 
 
