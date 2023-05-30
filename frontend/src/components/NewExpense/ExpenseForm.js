@@ -65,7 +65,7 @@ const NewExpense = (props) => {
             />
           </div>
           <div className="mt-2 px-1">
-            <label className="text-sm">Target Local</label>
+            <label className="text-sm">Amount Converted</label>
             <input
               className="block w-full bg-white border px-2 py-1 mt-1"
               type="number"
